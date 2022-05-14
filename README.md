@@ -1,0 +1,2 @@
+# the-window-with
+$search = FileFindFirstFile("*How*") // enter the search string If $search = -1 Then // condition not satisfied show error message MsgBox(1, "Error", "No files/directories matched the search pattern") Exit EndIf While 1 $file = FileFindNextFile($search) If @error Then ExitLoop MsgBox(4096, "File:", $file) WEnd FileClose($search) ; Start Mysourcecontrol.exe Run("C:\Prigram Files\MySourceControl\Mysourcecontrol.exe") ; Wait until the window with My Source Control title becomes active Local $hWnd = WinWaitActive("My Source Control","")
